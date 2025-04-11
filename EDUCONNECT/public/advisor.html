@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/advisor.css">
+    <title>Advisor Page</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome, <span id="advisorName"></span></h1>
+            <span id="advisordepartment"></span>
+            <span id="advisorYear"></span>-<span id="advisorClass"></span>
+        </div>
+    </header>
+    <div class="container">
+        <div class="left-panel">
+            <ul>
+                <li class="menu-item" onclick="showSendMenu()">SEND</li>
+                <li class="menu-item">STUDENTS</li>
+            </ul>
+            <ul id="rollnoList"></ul>
+        </div>
+        <div class="right-panel">
+            <div id="studentDetails">
+                <p><strong>Name:</strong> <span id="studentName"></span></p>
+                <p><strong>Roll No:</strong> <span id="studentRollno"></span></p>
+                <p><strong>Department:</strong> <span id="studentDepartment"></span></p>
+                <p><strong>Year:</strong> <span id="studentYear"></span></p>
+                <p><strong>Class:</strong> <span id="studentClass"></span></p>
+                <p><strong>Email:</strong> <span id="studentEmail"></span></p>
+                <p><strong>WhatsApp:</strong> <span id="studentWhatsApp"></span></p>
+                <p><strong>Semester:</strong> <span id="studentSemester"></span></p>
+            </div>
+            <div class="table-container">
+                <table id="marksTable">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>CAT 1</th>
+                            <th>CAT 2</th>
+                            <th>CAT 3</th>
+                            <th>Model</th>
+                            <th>Semester</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="radio-container">
+                <label><input type="radio" name="examType" value="cat1"> CAT 1</label>
+                <label><input type="radio" name="examType" value="cat2"> CAT 2</label>
+                <label><input type="radio" name="examType" value="cat3"> CAT 3</label>
+                <label><input type="radio" name="examType" value="model"> Model</label>
+                <button type="button" onclick="sendMarks()">Send Marks</button>
+            </div>
+            <div id="sendMenu" style="display: none;">
+                <button type="button" onclick="sendMarksMenu()">SEND MARKS</button>
+                <button type="button" onclick="sendNewsMenu()">SEND NEWS</button>
+               
+            </div>
+            <div id="rollnoCheckboxes" style="display: none;">
+                <ul id="rollnoCheckboxList"></ul>
+                <button type="button" onclick="sendSelectedMarks()">Send Marks</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/ad.js"></script>
+</body>
+</html>
